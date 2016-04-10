@@ -39,7 +39,8 @@ class qwe extends Component {
         </Text>
 
         <TextInput text={ this.state.input }
-          onChange={(e) => this.setState({ input: e })}
+          onChangeText={(e) => this.setState({ input: e })}
+          onSubmitEditing = { this.showMeaning }
         />
 
         <Text style={ styles.germanLabel} >
@@ -47,7 +48,7 @@ class qwe extends Component {
         </Text>
 
         <Text style={ styles.germanWord } >
-          { this.state.input }
+          { this.state.output }
         </Text>
       </View>
     );
